@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="516.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycom.myapp.mailsendsystem.controller.SendAccountOptionFrameController">
+    <children>
+        <VBox prefHeight="516.0" prefWidth="448.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Label text="发件人："/>
+                        <TextField fx:id="addresserTextField" promptText="请输入发件人邮箱："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Label text="密    码："/>
+                        <PasswordField fx:id="passwordField" promptText="请输入密码或授权码："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Label text="服务器："/>
+                        <TextField fx:id="serverTextField" promptText="请输入服务器："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#do_saveButton_event" text="保存"/>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#do_cancelButton_event"
+                                text="取消"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

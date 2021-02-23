@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.HTMLEditor?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0"
+            prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycom.myapp.mailsendsystem.controller.MainFrameController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="641.0" prefWidth="719.0">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="optionButton" mnemonicParsing="false" onAction="#do_optionButton_event"
+                                text="设置"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Label text="收信人："/>
+                        <TextField fx:id="addresseeTextField" prefHeight="30.0" prefWidth="507.0"
+                                   promptText="请输入收件人邮箱："/>
+                    </children>
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Label text="主    题："/>
+                        <TextField fx:id="subjectTextField" prefHeight="30.0" prefWidth="504.0" promptText="请输入邮件主题："/>
+                    </children>
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                    <children>
+                        <Button fx:id="addAppendixButton" mnemonicParsing="false" onAction="#do_addAppendixButton_event"
+                                text="添加附件"/>
+                        <Label fx:id="appendixNameLabel"/>
+                    </children>
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="377.0" prefWidth="715.0">
+                    <children>
+                        <HTMLEditor fx:id="contentHTMLEditor"
+                                    htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;"
+                                    prefHeight="309.0" prefWidth="632.0"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="addresseeLabel"/>
+                    </children>
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Button fx:id="sendButton" mnemonicParsing="false" onAction="#do_sendButton_event" text="发送"/>
+                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#do_resetButton_event" text="重置"/>
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#do_exitButton_event" text="退出"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
